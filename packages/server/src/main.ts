@@ -24,7 +24,7 @@ const { env, name, version, host, port } = appConfig;
 
 // Serve the build directory.
 const staticPages = new Koa();
-staticPages.use(serve(`${__dirname}/../dist/client`));
+staticPages.use(serve(`${__dirname}/../../dist/client`));
 app.use(mount('/', staticPages));
 
 httpServer.listen({ host, port }, () => {

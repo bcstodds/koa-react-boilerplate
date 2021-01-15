@@ -2,7 +2,7 @@ import { Options as CorsOptions } from '@koa/cors';
 import dotenv from 'dotenv';
 import { Options as BodyParserOptions } from 'koa-bodyparser';
 
-const { name, version } = require('./package.json');
+const { name, version } = require('../package.json');
 
 dotenv.config();
 
