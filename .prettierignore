@@ -1,0 +1,11 @@
+node_modules
+packages/client/build
+packages/client/node_modules
+packages/dist
+packages/server/node_modules
+
+\.*
+*.css
+*.html
+*.json
+*.md
