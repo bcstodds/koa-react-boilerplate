@@ -1,24 +1,12 @@
-import React, { useState, useEffect } from 'react';
-
-function DogList() {
-  const [dogs, setDogs] = useState([]);
-  useEffect(() => {
-    fetch('/dogs')
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(`STODDS: ${result}`);
-        setDogs(result);
-      });
-  }, []);
+function DogList(props: {dogs: any[]}) {
   return (
     <div>
       <h1>Dogs</h1>
-      {renderDogs(dogs)}
+      {renderDogs(props.dogs)}
     </div>
   );
 }
 
-// TODO: real types.
 function renderDogs(dogs: any) {
   return (
     <>

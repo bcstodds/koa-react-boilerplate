@@ -1,15 +1,19 @@
-import React from 'react';
-import './App.css';
+import { Redirect, Route, Switch, BrowserRouter } from 'react-router-dom';
 
-import DogList from './Components/DogList/DogList';
+import './App.css';
+import DogPage from './Pages/DogPage';
+import NotFoundPage from './Pages/NotFoundPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <DogList />
-      </header>
-    </div>
+      <BrowserRouter>
+          <Switch>
+            <Route exact path='/' component={DogPage} />
+            <Route path="*" component={NotFoundPage} />
+          </Switch>
+      </BrowserRouter>
+  </div>
   );
 }
 
